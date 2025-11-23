@@ -94,8 +94,6 @@ Install all necessary Python packages:
 
 pip install ultralytics
 
-(The requirements.txt should contain: ultralytics, opencv-python, sqlite3, firebase-admin, etc.)
-
 5. Add Custom Model Weights
 
 Place your trained YOLOv8 model file in the appropriate location:
@@ -109,7 +107,7 @@ Place it in the same folder as the python file
 
 Execute the main application file. This will open a new window showing the live webcam feed with bounding boxes.
 
-python MainApplication.py
+python Main.py
 
 
 (Note: Ensure you have configured your Firebase credentials or API key if cloud logging is enabled.)
@@ -120,7 +118,7 @@ Testing focuses on verifying the accuracy (FR1.2) and speed (NFR1.0) of the dete
 
 1. Real-Time Detection Test (Functional)
 
-Run the application using python MainApplication.py.
+Run the application using python Main.py.
 
 Hold a variety of plastic bottles (different sizes, colors, and labels) in front of the webcam.
 
@@ -144,7 +142,4 @@ Perform 10 successful detection events.
 
 Check the local log.db file (using an SQLite viewer) and the remote Firebase console.
 
-Expected Output: 10 distinct records, each with a timestamp, confidence score, and confirmation of the event, should be present in both the local and cloud databases.
-
-below is the link to download the model.
-https://drive.google.com/file/d/1hxIlbYVp_PBeiDX1YaC_QzIZYpJornhS/view?usp=drivesdk
+Expected Output: 10 distinct records, each with a timestamp, confidence score, and confirmation of the event, should be present in both the local and cloud 
