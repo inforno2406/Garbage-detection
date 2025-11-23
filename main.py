@@ -1,7 +1,7 @@
 import cv2
 from ultralytics import YOLO
 
-model = YOLO(r'C:\Users\Moksh\Desktop\project vit\last_12_1_2025.pt')
+model = YOLO(r'last_12_1_2025.pt')
 print(model.names)
 webcamera = cv2.VideoCapture(0)
 # webcamera.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
@@ -20,3 +20,4 @@ while True:
 
 webcamera.release()
 cv2.destroyAllWindows()
+
