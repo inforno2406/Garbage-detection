@@ -92,8 +92,7 @@ source venv/bin/activate  # On Linux/macOS
 
 Install all necessary Python packages:
 
-pip install -r requirements.txt
-
+pip install ultralytics
 
 (The requirements.txt should contain: ultralytics, opencv-python, sqlite3, firebase-admin, etc.)
 
@@ -101,9 +100,10 @@ pip install -r requirements.txt
 
 Place your trained YOLOv8 model file in the appropriate location:
 
-Download your custom yolov8_bottle_detector.pt weight file.
+Download your custom model from the below link:
+https://drive.google.com/file/d/1hxIlbYVp_PBeiDX1YaC_QzIZYpJornhS/view?usp=drivesdk
 
-Place it in the host_application/models/ directory.
+Place it in the same folder as the python file
 
 6. Run the Application
 
@@ -145,3 +145,6 @@ Perform 10 successful detection events.
 Check the local log.db file (using an SQLite viewer) and the remote Firebase console.
 
 Expected Output: 10 distinct records, each with a timestamp, confidence score, and confirmation of the event, should be present in both the local and cloud databases.
+
+below is the link to download the model.
+https://drive.google.com/file/d/1hxIlbYVp_PBeiDX1YaC_QzIZYpJornhS/view?usp=drivesdk
